@@ -1,0 +1,19 @@
+---
+- name: Query all contracts
+  cisco.aci.aci_contract:
+    host: "{{ ansible_host}}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    tenant: SnV
+    state: query
+  delegate_to: localhost
+  register: query_result
+
+
+- name: Filter Output
+  ansible.builtin.debug:
+    msg: "{​{​ query_result | community.general.json_query('current[0].fvTenant.children[*].vzBrCP.attributes.name')}​}​"
+  
+
+
+
