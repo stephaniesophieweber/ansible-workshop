@@ -4,10 +4,10 @@
   tasks:
     - name: Create a directory if it does not exist
       ansible.builtin.file:
-        path: ~/my_favourite_dish_SW
+        path: "~/my_favourite_dish_SW"
         state: directory
         mode: '0755'
 
     - name: dish  text
-      command: echo "my favourite dish is grandmas food" > ~/my_favourite_dish_SW/fouvourite_dish.txt
+      command: echo "my favourite dish is grandmas food" > "~/my_favourite_dish_SW/fouvourite_dish.txt"
      
