@@ -1,0 +1,10 @@
+---
+- name: Lösung Aufgabe4 making new directories and files
+  hosts: web
+  tasks:
+    - name: creating new directory
+      file: ~/my_favourite_dish
+
+    - name: dish_text
+  command: echo "my favourite dish is grandmas food" > ~/my_favourite_dish/fouvourite_dish.txt
+     
