@@ -7,7 +7,8 @@
         path: "~/my_favourite_dish_SW"
         state: directory
         mode: '0755'
-
-    - name: dish  text
-      command: echo "my favourite dish is grandmas food" > "~/my_favourite_dish_SW/fouvourite_dish.txt"
-     
+  
+    - name: Copy using inline content
+      ansible.builtin.copy:
+        content: 'my favourite food made by grandma is Graupensuppe'
+        dest: ~/my_favourite_dish_SW/favourite_dish.txt
